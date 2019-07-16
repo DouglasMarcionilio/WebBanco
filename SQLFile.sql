@@ -1,0 +1,16 @@
+create database bancoGohan;
+use bancogohan;
+create table Dadoscad(coddados int auto_increment primary key, nome varchar(50) not null, idade int not null, cpf varchar(15) not null);
+create table login(codlogin int auto_increment primary key, usuario varchar(30) not null, senha varchar(30) not null, codlogdados int,foreign key (codlogdados) references Dadoscad(coddados) on delete cascade on update cascade);
+create table conta(codconta int auto_increment primary key, idconta int(10) not null, saldo double not null, ativa bool not null, coddadosconta int,foreign key (coddadosconta) references Dadoscad(coddados) on delete cascade on update cascade);
+create table transacoes(codtrans int auto_increment primary key, datahora timestamp null default current_timestamp, tipo varchar(30) not null, valor varchar(10) not null, coddadoscad int, foreign key(coddadoscad) references Dadoscad(coddados) on delete cascade on update cascade);
+select * from dadoscad;
+select * from login;
+select * from conta;
+SELECT coddados FROM dadoscad WHERE nome = 'DouglasMarcionilio';
+select nome, coddados from dadoscad;
+delete from dadoscad where coddados =1;
+select codlogdados from login where usuario = "phill160";
+update conta set saldo = 0 where coddadosconta = 2;
+drop table transacoes;
+drop database bancogohan;

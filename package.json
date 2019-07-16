@@ -1,0 +1,19 @@
+{
+  "name": "webbanco",
+  "version": "1.0.0",
+  "description": "Site simples de um banco",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DouglasMarcionilio",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
+  }
+}
